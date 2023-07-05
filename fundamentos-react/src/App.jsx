@@ -1,5 +1,8 @@
 import React from "react";
 
+
+import UsuarioInfo from "./components/condicional/UsuarioInfo";
+import ParOuImpar from "./components/condicional/ParOuImpar";
 import TabelaProdutos from "./components/repeticao/TabelaProdutos";
 import ListaAluno from "./components/repeticao/ListaAluno";
 import FamilyMember from "./components/basics/FamilyMember"
@@ -13,7 +16,15 @@ import Aleatorio from "./components/basics/Aleatorio";
 export default _ =>
     <div className="App">
         <h1>Fundamentos do React</h1>
+
         <div className="Cards">
+            <Card titulo="#08 Renderização Condicional" color="#9568F5">
+                <ParOuImpar numero={20}></ParOuImpar>
+                <UsuarioInfo usuario={{nome: 'Paulo'}}></UsuarioInfo>
+                <UsuarioInfo usuario={{email: 'P@aulo.com'}}></UsuarioInfo>
+                <UsuarioInfo usuario={{}}></UsuarioInfo>
+            </Card>
+
             <Card titulo="#07 Desafio Tabela" color="#73F244">
                 <TabelaProdutos></TabelaProdutos>
             </Card>
@@ -22,7 +33,7 @@ export default _ =>
                 <ListaAluno></ListaAluno>
             </Card>
 
-            <Card titulo="#05 Componente com filhos" color="#8A015E">
+            <Card titulo="#05 Componente Com Filhos" color="#8A015E">
                 {
                     <Family sobrenome="Lopes">
                         <FamilyMember nome="Eloisa" />
